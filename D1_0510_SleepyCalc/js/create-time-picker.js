@@ -1,14 +1,7 @@
 const hourWakeup = document.getElementById("hour-wakeup");
 const minuteWakeup = document.getElementById("minute-wakeup");
 
-for (var i = 1; i <= 9; i++) {
-    const h = document.createElement("option");
-    const h_text = document.createTextNode("0" + i.toString());
-    h.appendChild(h_text);
-    h.value = "0" + i.toString();
-    hourWakeup.appendChild(h);
-};
-for (var i = 10; i <= 12; i++) {
+for (var i = 1; i <= 12; i++) {
     const h = document.createElement("option");
     const h_text = document.createTextNode(i.toString());
     h.appendChild(h_text);
@@ -36,14 +29,7 @@ for (var i = 10; i <= 55; i+=5) {
 const hourSleep = document.getElementById("hour-sleep");
 const minuteSleep = document.getElementById("minute-sleep");
 
-for (var i = 1; i <= 9; i++) {
-    const h = document.createElement("option");
-    const h_text = document.createTextNode("0" + i.toString());
-    h.appendChild(h_text);
-    h.value = "0" + i.toString();
-    hourSleep.appendChild(h);
-};
-for (var i = 10; i <= 12; i++) {
+for (var i = 1; i <= 12; i++) {
     const h = document.createElement("option");
     const h_text = document.createTextNode(i.toString());
     h.appendChild(h_text);
