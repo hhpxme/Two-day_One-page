@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color: #fff;
+    --dark: #1c1c1c;
+    --light: #f1f1f1;
+    --primary: #a7e3fe;
+    --trans: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--trans);
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    font-family: 'Noto Serif', serif;
+    font-size: 100%;
+    color: var(--light);
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    background-image: url(../images/bg.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* From https://css.glass */
+.glassmorphism-overlay {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+/* Header - Logo */
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+header span {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--light);
+}
+
+/* Footer - Copyright */
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Main - Calc Tools */
+main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100% - 48px - 96px);
+    margin: 96px 0 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 66%;
+    height: 66%;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+main .container::-webkit-scrollbar {
+    display: none;
+}
+main .result-container {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding: 32px;
+    width: 66%;
+    height: 80%;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: first baseline;
+    align-items: center;
+    overflow-y: scroll;
+}
+main .result-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Main - Container */
+.container .tool {
+    position: relative;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool .text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.tool .time {
+    position: relative;
+    display: flex;
+    margin: 24px;
+    width: 33%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.tool .time .time-picker {
+    position: relative;
+    display: flex;
+    min-width: 224px;
+    width: 224px;
+    min-height: 56px;
+    height: 56px;
+    border-radius: 9999px 0 0 9999px;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.tool .time .btn-calc {
+    position: relative;
+    display: flex;
+    min-width: 56px;
+    width: 56px;
+    min-height: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 9999px 9999px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.time-picker select {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--light);
+    text-align: center;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+.time-picker select:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: none;
+}
+.time-picker select.hour {
+    border-radius: 9999px 0 0 9999px;
+}
+.time-picker select option {
+    background-color: #1c1c1c;
+}
+
+.tool .btn-sleep-now {
+    position: relative;
+    display: flex;
+    min-width: 224px;
+    width: 224px;
+    min-height: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.tool .btn-sleep-now:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Main - Result Container */
+.result-container .text {
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.result-container table {
+    table-layout: fixed;
+    margin: 24px;
+    width: 66%;
+    height: auto;
+    border-collapse: collapse;
+}
+table th {
+    font-size: 1.2rem;
+}
+table,
+table th,
+table tr,
+table td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 8px;
+}
+tr:nth-child(2),
+tr:nth-child(3),
+tr:nth-child(4) {
+    color: #f5564a;
+}
+tr:nth-child(5) {
+    color: #ffee53;
+}
+tr:nth-child(6),
+tr:nth-child(7) {
+    color: #5eb861;
+}
+
+.btn-back {
+    position: relative;
+    display: flex;
+    min-width: 168px;
+    width: 168px;
+    min-height: 48px;
+    height: 48px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 16px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.btn-back:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

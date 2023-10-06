@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sleepy Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <header>
+        <span id="logo-text">Sleepy Calc.</span>
+    </header>
+    <main>
+        <div class="container" id="container">
+            <div class="tool">
+                <span class="text">I have to wake up at:</span>
+                <div class="time">
+                    <div class="time-picker glassmorphism-overlay">
+                        <select title="hour" class="hour" id="hour-wakeup" name="hour-wakeup"></select>
+                        <span>:</span>
+                        <select title="minute" class="minute" id="minute-wakeup" name="minute-wakeup"></select>
+                        <span>:</span>
+                        <select title="am-pm" class="am-pm" id="am-pm-wakeup" name="am-pm-wakeup">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                    <div class="btn-calc glassmorphism-overlay" id="calc-wakeup">
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="tool">
+                <span class="text">I will go to sleep at:</span>
+                <div class="time">
+                    <div class="time-picker glassmorphism-overlay">
+                        <select title="hour" class="hour" id="hour-sleep" name="hour-sleep"></select>
+                        <span>:</span>
+                        <select title="minute" class="minute" id="minute-sleep" name="minute-sleep"></select>
+                        <span>:</span>
+                        <select title="am-pm" class="am-pm" id="am-pm-sleep" name="am-pm-sleep">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                    <div class="btn-calc glassmorphism-overlay" id="calc-sleep">
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="tool">
+                <div class="btn-sleep-now glassmorphism-overlay" id="calc-sleep-now">
+                    <span>Sleep Now</span>
+                </div>
+            </div>
+        </div>
+        <div class="result-container glassmorphism-overlay" id="result-container">
+            <div class="text">
+                <span id="first-text"></span>
+                <span id="time-text" style="color: #3b873e"></span>
+            </div>
+            <br />
+            <span id="last-text" style="font-size: 1.2rem;"></span>
+            <table class="glassmorphism-overlay">
+                <thead>
+                    <tr>
+                        <th>Cycle</th>
+                        <th>Time's Cycle</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="btn-back">
+                <i class='bx bx-left-arrow-alt'></i>
+                <span>Back</span>
+            </div>
+        </div>
+    </main>
+    <footer class="glassmorphism-overlay">
+        <span style="color: var(--light);">Copyright © 2023 Ho Chi Minh City, Hoang Hong Phong. All Rights Reserved</span>
+    </footer>
+
+    <script src="js/create-time-picker.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
