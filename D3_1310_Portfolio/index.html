@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio.</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header>
+        <nav>
+            <span class="logo-text">
+                <a href="#">Portfolio.</a>
+            </span>
+            <ul class="nav-menu">
+                <li class="nav-link"><a href="#home">Trang chủ</a></li>
+                <li class="nav-link"><a href="#profile">Hồ sơ</a></li>
+                <li class="nav-link"><a href="#timeline">Hành trình</a></li>
+                <li class="nav-link"><a href="#projects">Dự án</a></li>
+                <li class="nav-link"><a href="#contact">Liên lạc</a></li>
+            </ul>
+            <ul class="tool-menu">
+                <li class="tool" id="theme-tool">
+                    <div class="theme-mode" id="mode-light">
+                        <i class='bx bx-sun'></i>
+                    </div>
+                    <div class="theme-mode" id="mode-dark">
+                        <i class='bx bx-moon'></i>
+                    </div>
+                </li>
+                <li class="tool" id="language-tool">
+                    <span id="lang-vi">vi</span>
+                    <span id="lang-en">en</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container" onscroll="scrollSticky()">
+            <section class="home" id="home">
+                <div class="home-top">
+                    <div class="home-content">
+                        <div class="home-text">
+                            <p id="home-text-hi">Lời mở đầu!</p>
+                            <p id="home-text-title">Chào mừng</p>
+                            <p id="home-text-subtitle">đến với trang web.</p>
+                            <div class="home-text-introduce">
+                                <p id="home-text-introduce">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    Quisque non tellus orci ac. 
+                                    Mauris a diam maecenas sed. 
+                                    Enim ut tellus elementum sagittis vitae et leo. 
+                                    Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. 
+                                </p>
+                                <div class="home-next-page">
+                                    <a href="#profile" class="glassmorphism-overlay">
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </a>
+                                    <span>SEE MORE.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-image">
+                        <div class="home-image-container" style="width: 360px; height: 360px;">
+                            <div class="home-image-overlay"></div>
+                            <img src="images/me/home_img.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="home-bottom">
+                    <span>TRANG CHỦ</span>
+                    <hr />
+                </div>
+            </section>
+            <!-- Fail
+            <section class="section-home" id="home">
+                <div class="home-main-content">
+                    <div class="home-text-overlay">
+                        <div class="home-text">
+                            <p id="home-text-hi">Lời mở đầu!</p>
+                            <p id="home-text-title">Chào mừng</p>
+                            <p id="home-text-subtitle">đến với trang web.</p>
+                            <div class="home-text-introduce">
+                                <p id="home-text-introduce">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    Quisque non tellus orci ac. 
+                                    Mauris a diam maecenas sed. 
+                                    Enim ut tellus elementum sagittis vitae et leo. 
+                                    Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. 
+                                </p>
+                                <div class="home-next-page">
+                                    <a href="#profile" class="glassmorphism-overlay">
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </a>
+                                    <span>SEE MORE.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-avatar">
+                        <div class="home-avatar-overlay"></div>
+                    </div>
+                </div>
+                <div class="home-bottom-content">
+                    <span>TRANG CHỦ</span>
+                    <hr />
+                </div>
+            </section>
+            End Fail -->
+        </div>
+    </main>
+    <footer class="glassmorphism-overlay">
+        <span style="color: var(--dark);">Copyright © 2023 Ho Chi Minh City, Hoang Hong Phong. All Rights Reserved</span>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
