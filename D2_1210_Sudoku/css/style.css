@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color: #fff;
+    --dark: #1c1c1c;
+    --light: #f1f1f1;
+    --primary: #1c2451;
+    --primary-color: rgba(255, 255, 255, 0.4);
+    --trans: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--trans);
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    font-family: 'Noto Serif', serif;
+    font-size: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    background-image: url(../images/bg_light.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* From https://css.glass */
+.glassmorphism-overlay {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header - Logo */
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+header span {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--light);
+}
+
+/* Footer - Copyright */
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Main - Calc Tools */
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 48px - 96px);
+    margin: 96px 0 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 80%;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: scroll;
+}
+main .container::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    main .container {
+        width: 66%;
+    }
+}
+@media screen and (max-width: 960px) {
+    main .container {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 720px) {
+    main .container {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 640px) {
+    main .container {
+        width: 96%;
+    }
+}
+
+/* Game Menu */
+.container .game-menu {
+    position: relative;
+    display: flex;
+    padding: 0 16px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-menu .game-mode {
+    position: relative;
+    display: flex;
+    width: 66%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+.game-mode span{
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-right: 8px;
+}
+.game-mode .mode {
+    position: relative;
+    display: flex;
+    width: 96px;
+    height: 75%;
+    margin: 0 8px;
+    border-radius: 999px;
+    justify-content: center;
+    align-items: center;
+}
+.game-mode .mode:last-child {
+    margin-right: none;
+}
+.game-mode .mode.current-mode {
+    color: var(--primary);
+}
+.game-mode .mode:hover {
+    background-color: var(--primary-color);
+    color: var(--light);
+}
+
+.game-menu .game-information {
+    position: relative;
+    display: flex;
+    width: 33%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-information .game-mistake {
+    margin-left: 8px;
+}
+.game-information .game-timer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-timer .time {
+    margin-right: 16px;
+}
+.game-timer .time-control {
+    position: relative;
+    display: flex;
+    margin-top: 2px;
+    padding: 4px;
+    width: auto;
+    height: 75%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+}
+.game-timer .time-control:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+} 
+.game-timer .time-control i {
+    margin: 1px 0 0 1px;
+    font-size: 1.2rem;
+}
+.game-timer .time-control i.pause-icon {
+    display: none;
+}
+.game-timer .time-control i.play-icon {
+    display: initial;
+}
+.game-timer .time-control.playing i.pause-icon {
+    display: initial;
+}
+.game-timer .time-control.playing i.play-icon {
+    display: none;
+}
+
+/* Game Container */
+.container .game-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100% - 48px - 16px);
+    min-height: 320px;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+/* Game Panel */
+.game-container .game-panel {
+    position: relative;
+    display: flex;
+    padding: 16px;
+    width: 420px;
+    height: 420px;
+    border-radius: 8px;
+}
+.game-panel .sudoku-board {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    outline: 1px solid var(--dark);
+}
+
+.sudoku-board .cell{
+    width: calc(100%/3);
+    height: calc(100%/3);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+.cell input {
+    background-color: transparent;
+    color: transparent;
+    text-shadow: 0 0 0 var(--dark);
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input:focus {
+    background-color: #a7e3fe;
+    outline: none;
+}
+
+/* Game Control Panel */
+.game-container .game-control-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: calc(100% - 420px - 16px);
+    min-height: 420px;
+    height: 100%;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-control-panel .tools-game {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-control-panel .tools-game .tool {
+    position: relative;
+    display: flex;
+    width: 48%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+}
+.game-control-panel .tools-game i {
+    margin-right: 16px;
+}
+
+.game-control-panel .numpad {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    justify-content: space-between;
+    align-items: center;
+}
+.numpad .number {
+    position: relative;
+    display: flex;
+    margin: 8px 0;
+    width: 30%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: var(--primary-color);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-control-panel .btn-new-game {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
