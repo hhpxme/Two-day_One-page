@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio.</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <header class="glassmorphism-overlay">
+        <nav>
+            <span class="logo-text">
+                <a href="#">Portfolio.</a>
+            </span>
+            <ul class="nav-menu">
+                <li class="nav-link"><a href="#home">Trang chủ</a></li>
+                <li class="nav-link"><a href="#profile">Hồ sơ</a></li>
+                <li class="nav-link"><a href="#timeline">Hành trình</a></li>
+                <li class="nav-link"><a href="#skills">Kỹ năng</a></li>
+                <li class="nav-link"><a href="#projects">Dự án</a></li>
+                <li class="nav-link"><a href="#contact">Liên lạc</a></li>
+            </ul>
+            <ul class="tool-menu">
+                <li class="tool" id="theme-tool">
+                    <div class="theme-mode" id="mode-light">
+                        <i class='bx bx-sun'></i>
+                    </div>
+                    <div class="theme-mode" id="mode-dark">
+                        <i class='bx bx-moon'></i>
+                    </div>
+                </li>
+                <li class="tool" id="language-tool">
+                    <span id="lang-vi">vi</span>
+                    <span id="lang-en">en</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="home-background"></div>
+        <section class="home" id="home">
+            <div class="home-overlay"></div>
+            <div class="home-body">
+                <div class="home-left">
+                    <div class="home-column-content">
+                        <div class="home-greeting">
+                            <p id="home-greeting">Lời mở đầu!</p>
+                            <p id="home-welcome-1">Chào mừng</p>
+                            <p id="home-welcome-2">đến với trang web.</p>
+                        </div>
+                        <div class="home-content">
+                            <p id="home-introduce">
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="home-seemore-content glassmorphism-overlay">
+                                <i class='bx bx-right-arrow-alt'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-right">
+                    <div class="home-image">
+                        <div class="home-rectangle"></div>
+                        <img src="images/mon/1.jpg" alt="" id="home-picture">
+                    </div>
+                </div>
+            </div>
+            <div class="home-bottom">
+                <span id="home-text">TRANG CHỦ</span>
+                <hr />
+            </div>
+        </section>
+        <section class="profile" id="profile">
+            <div class="container">
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        document.getElementById("home-text").innerHTML = w.toString() + " and " + h.toString();
+    </script>
+</body>
+</html>
