@@ -37,7 +37,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main onscroll="scrollMain()">
         <div class="home-background"></div>
         <section class="home" id="home">
             <div class="home-overlay"></div>
@@ -74,7 +74,83 @@
         </section>
         <section class="profile" id="profile">
             <div class="container">
-                
+                <div class="profile-title">
+                    <span id="profile-title">Profile.</span>
+                    <div class="vertical-line"></div>
+                </div>
+                <div class="profile-body">
+                    <div class="profile-column" id="column-basic-information">
+                        <div class="profile-avatar">
+                            <img src="images/mon/2.jpg" alt="avatar">
+                        </div>
+                        <span class="profile-name" id="name">Phạm Vũ Thảo Trang</span>
+                        <span class="profile-job" id="job">Fresher Front-end Developer</span>
+                        <hr style="margin: 28px 0; width: 75%; border: 1px solid var(--line-color);"/>
+                        <div class="profile-information">
+                            <div class="profile-information-item">
+                                <i class='bx bx-home-alt-2'></i>
+                                <span class="information-text">Lorem ipsum</span>
+                            </div>
+                            <div class="profile-information-item">
+                                <i class='bx bx-home-alt-2'></i>
+                                <span class="information-text">Lorem ipsum</span>
+                            </div>
+                            <div class="profile-information-item">
+                                <i class='bx bx-home-alt-2'></i>
+                                <span class="information-text">Lorem ipsum</span>
+                            </div>
+                            <div class="profile-information-item">
+                                <i class='bx bx-home-alt-2'></i>
+                                <span class="information-text">Lorem ipsum</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-column" id="column-summary">
+                        <div class="profile-content">
+                            <div class="profile-content-title">
+                                <span class="profile-content-title">Title.</span>
+                                <hr />
+                            </div>
+                            <p class="profile-content-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Egestas quis ipsum suspendisse ultrices gravida dictum. 
+                                Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. 
+                                Consequat mauris nunc congue nisi vitae suscipit tellus. 
+                                Fermentum iaculis eu non diam phasellus vestibulum. 
+                                At augue eget arcu dictum varius duis at consectetur. 
+                                Amet consectetur adipiscing elit pellentesque. 
+                                Varius duis at consectetur lorem donec massa sapien. 
+                                Sem nulla pharetra diam sit. 
+                                Facilisis magna etiam tempor orci eu lobortis elementum nibh. 
+                                A arcu cursus vitae congue mauris. 
+                                Enim eu turpis egestas pretium aenean pharetra magna ac.
+                            </p>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-content-title">
+                                <span class="profile-content-title">Title.</span>
+                                <hr />
+                            </div>
+                            <p class="profile-content-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Egestas quis ipsum suspendisse ultrices gravida dictum. 
+                                Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. 
+                                Consequat mauris nunc congue nisi vitae suscipit tellus. 
+                                Fermentum iaculis eu non diam phasellus vestibulum. 
+                                At augue eget arcu dictum varius duis at consectetur. 
+                                Amet consectetur adipiscing elit pellentesque. 
+                                Varius duis at consectetur lorem donec massa sapien. 
+                                Sem nulla pharetra diam sit. 
+                                Facilisis magna etiam tempor orci eu lobortis elementum nibh. 
+                                A arcu cursus vitae congue mauris. 
+                                Enim eu turpis egestas pretium aenean pharetra magna ac.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-column"></div>
+                </div>    
             </div>
         </section>
     </main>

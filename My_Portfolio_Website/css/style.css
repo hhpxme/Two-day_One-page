@@ -4,7 +4,9 @@
     --dark: #1c1c1c;
     --light: #f1f1f1;
     --primary: #014a6c;
+    --header-color: #b5dbfb;
     --border: 1px solid rgba(255, 255, 255, 0.3);
+    --line-color: rgba(0, 0, 0, 0.4);
     --trans: all 0.3s ease;
 }
 
@@ -65,6 +67,9 @@ header {
     z-index: 999;
     transition: none;
 }
+header.sticky {
+    background-color: var(--header-color);
+}
 header nav {
     position: relative;
     display: flex;
@@ -77,7 +82,7 @@ header nav {
     transition: all 0.5s ease;
 }
 header.sticky nav {
-    width: 75%;
+    width: 80%;
 }
 nav .logo-text a {
     font-family: 'Merriweather', serif;
@@ -97,13 +102,10 @@ nav ul li {
 }
 nav ul li.nav-link {
     padding: 8px 16px;
-    margin: 0 32px;
+    margin: 0 24px;
 }
 nav ul li.nav-link:hover {
     border-bottom: 1px solid var(--primary);
-}
-header.sticky ul li.nav-link {
-    margin: 0 16px;
 }
 
 nav #theme-tool #mode-light {
@@ -140,7 +142,7 @@ main {
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    overflow: scroll;   
 }
 main::-webkit-scrollbar {
     display: none;
@@ -152,6 +154,15 @@ section {
     display: flex;
     width: 100%;
     height: 100%;
+}
+
+section .container {
+    position: relative;
+    display: flex;
+    height: calc(100% - 72px);
+    width: 100%;
+    margin: 72px 0 48px;
+    padding: 48px;
 }
 
 /* Home Section */
@@ -310,10 +321,116 @@ section {
             color: var(--primary);
             margin: 0 calc(7.5% + 32px);
         }
+/* End Home Section Style */
 
+/* Profile Section */
+.profile-title {
+    position: relative;
+    height: 100%;
+    width: 4%;
+}
+    .profile-title #profile-title {
+        font-family: 'Merriweather', serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        writing-mode: vertical-lr;
+    }
+    .profile-title .vertical-line {
+        height: calc(100% - 3 * 48px );
+        width: 1px;
+        background-color: var(--dark);
+        margin-left: 6px;
+    }
 
+.profile-body {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 96%;
+    justify-content: space-between;
+}
+    .profile-body .profile-column {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 450px;
+        width: 33%;
+        height: 100%;
+        min-height: calc(760px - 72px - 3 * 48px);
+        max-height: calc(1080px - 72px - 3 * 48px);
+        padding: 0 32px;
+        align-items: center;
+    }
+        .profile-column .profile-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 48px;
+        }
+            .profile-content .profile-content-title {
+                width: 100%;
+                margin-bottom: 24px;
+            }
+                .profile-content-title span{
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: var(--primary);
+                }
+                .profile-content-title hr {
+                    border: 1px solid var(--primary);
+                }
 
-
+            .profile-content p.profile-content-text {
+                text-align: justify;
+            }
+        #column-basic-information .profile-avatar {
+            position: relative;
+            width: 50%;
+            aspect-ratio: 1/1;
+            border-radius: 999px;
+            margin: 24px 0;
+        }
+            #column-basic-information .profile-avatar img {
+                width: 100%;
+                height: 100%;
+                border-radius: 999px;
+                object-fit: cover;
+            }
+        
+        #column-basic-information .profile-name {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 8px 0;
+        }
+        #column-basic-information .profile-job {
+            font-family: 'Merriweather', serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        #column-basic-information .profile-information {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+        }
+            .profile-information .profile-information-item {
+                display: flex;
+                width: 100%;
+                margin-bottom: 16px;
+                align-items: center;
+            }
+                .profile-information-item span {
+                    font-size: 1.1rem;
+                }
+                .profile-information-item i {
+                    font-size: 1.2rem;
+                    margin: 0 24px 0 8px;
+                }
+        
 
 
 

@@ -1,0 +1,9 @@
+Col 1
+    - Picture
+    - Personal information
+Col 2
+    - Overview
+    - Objective
+Col 3
+    - Interest
+    - Contact
