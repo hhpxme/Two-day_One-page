@@ -38,6 +38,7 @@
         </nav>
     </header>
     <main onscroll="scrollMain()">
+        <!-- Home Section -->
         <div class="home-background"></div>
         <section class="home" id="home">
             <div class="home-overlay"></div>
@@ -72,87 +73,88 @@
                 <hr />
             </div>
         </section>
-        <section class="profile" id="profile">
-            <div class="container">
-                <div class="profile-title">
-                    <span id="profile-title">Profile.</span>
-                    <div class="vertical-line"></div>
+        <!-- End Home Section -->
+
+
+        <!-- Projects Section-->
+        <section class="projects" id="projects">
+             <div class="container">
+                <div class="title" id="project-title">
+                    <span class="title-text">Projects.</span>
+                    <hr class="title-line" />
                 </div>
-                <div class="profile-body">
-                    <div class="profile-column" id="column-basic-information">
-                        <div class="profile-avatar">
-                            <img src="images/mon/2.jpg" alt="avatar">
-                        </div>
-                        <span class="profile-name" id="name">Phạm Vũ Thảo Trang</span>
-                        <span class="profile-job" id="job">Fresher Front-end Developer</span>
-                        <hr style="margin: 28px 0; width: 75%; border: 1px solid var(--line-color);"/>
-                        <div class="profile-information">
-                            <div class="profile-information-item">
-                                <i class='bx bx-home-alt-2'></i>
-                                <span class="information-text">Lorem ipsum</span>
-                            </div>
-                            <div class="profile-information-item">
-                                <i class='bx bx-home-alt-2'></i>
-                                <span class="information-text">Lorem ipsum</span>
-                            </div>
-                            <div class="profile-information-item">
-                                <i class='bx bx-home-alt-2'></i>
-                                <span class="information-text">Lorem ipsum</span>
-                            </div>
-                            <div class="profile-information-item">
-                                <i class='bx bx-home-alt-2'></i>
-                                <span class="information-text">Lorem ipsum</span>
+                <div class="projects-body">
+                    <div class="project-topic">
+                        <div class="project-topic-introduce">
+                            <div class="project-topic-text">
+                                <span id="project-topic-name">Topic</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="profile-column" id="column-summary">
-                        <div class="profile-content">
-                            <div class="profile-content-title">
-                                <span class="profile-content-title">Title.</span>
-                                <hr />
+                        <div class="project-slideshow">
+                            <div class="project-select-show"></div>
+                            <i class='bx bx-chevron-left' id="pcc-btn-prev"></i>
+                            <div class="project-card-container">
+                                <div class="project-card card-focus">
+                                    <div class="project-overlay"></div>
+                                    <span class="project-name">Project Name.</span>
+                                    <br />
+                                    <p class="project-describe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <ul>
+                                        <li class="project-link">
+                                            <a href="#"><i class='bx bxl-github'></i></a>
+                                        </li>
+                                        <li class="project-link">
+                                            <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="project-card">
+                                    <div class="project-overlay"></div>
+                                    <span class="project-name">Project Name.</span>
+                                    <br />
+                                    <p class="project-describe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <ul>
+                                        <li class="project-link">
+                                            <a href="#"><i class='bx bxl-github'></i></a>
+                                        </li>
+                                        <li class="project-link">
+                                            <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                                        </li>
+                                        <li class="project-link" id="select-card">
+                                            chose
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="project-card">
+                                    <div class="project-overlay"></div>
+                                    <span class="project-name">Project Name.</span>
+                                    <br />
+                                    <p class="project-describe">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <ul>
+                                        <li class="project-link">
+                                            <a href="#"><i class='bx bxl-github'></i></a>
+                                        </li>
+                                        <li class="project-link">
+                                            <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                                        </li>
+                                        <li class="project-link" id="select-card">
+                                            chose
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dot-transition">
+                                    <span class="dot" onclick=""></span> 
+                                    <span class="dot" onclick=""></span> 
+                                    <span class="dot" onclick=""></span> 
+                                  </div>
                             </div>
-                            <p class="profile-content-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Egestas quis ipsum suspendisse ultrices gravida dictum. 
-                                Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. 
-                                Consequat mauris nunc congue nisi vitae suscipit tellus. 
-                                Fermentum iaculis eu non diam phasellus vestibulum. 
-                                At augue eget arcu dictum varius duis at consectetur. 
-                                Amet consectetur adipiscing elit pellentesque. 
-                                Varius duis at consectetur lorem donec massa sapien. 
-                                Sem nulla pharetra diam sit. 
-                                Facilisis magna etiam tempor orci eu lobortis elementum nibh. 
-                                A arcu cursus vitae congue mauris. 
-                                Enim eu turpis egestas pretium aenean pharetra magna ac.
-                            </p>
-                        </div>
-                        <div class="profile-content">
-                            <div class="profile-content-title">
-                                <span class="profile-content-title">Title.</span>
-                                <hr />
-                            </div>
-                            <p class="profile-content-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Egestas quis ipsum suspendisse ultrices gravida dictum. 
-                                Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. 
-                                Consequat mauris nunc congue nisi vitae suscipit tellus. 
-                                Fermentum iaculis eu non diam phasellus vestibulum. 
-                                At augue eget arcu dictum varius duis at consectetur. 
-                                Amet consectetur adipiscing elit pellentesque. 
-                                Varius duis at consectetur lorem donec massa sapien. 
-                                Sem nulla pharetra diam sit. 
-                                Facilisis magna etiam tempor orci eu lobortis elementum nibh. 
-                                A arcu cursus vitae congue mauris. 
-                                Enim eu turpis egestas pretium aenean pharetra magna ac.
-                            </p>
+                            <i class='bx bx-chevron-right' id="pcc-btn-next"></i>
                         </div>
                     </div>
-                    <div class="profile-column"></div>
-                </div>    
-            </div>
+                </div>
+             </div>
         </section>
+        <!-- End Projects Section -->
     </main>
 
     <script src="js/script.js"></script>
