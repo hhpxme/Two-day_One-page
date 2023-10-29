@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --dark: #1c1c1c;
+    --light: #f1f1f1;
+    --background: linear-gradient(165deg, rgba(230,243,254,1) 0%, rgba(61,160,247,1) 66%, rgba(19,140,245,1) 100%);;
+    --primary:  #138cf5;
+
+    --trans: all 0.3s ease;
+
+    --border: 1px solid rgba(255, 255, 255, 0.3);
+
+    --font-lora: 'Lora', serif;
+    --font-merriweather: 'Merriweather', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    font-family: 'Niramit', sans-serif;
+    font-size: 100%;
+    background: var(--background);
+    color: var(--dark);
+    overflow: hidden;
+}
+
+/* From https://css.glass */
+.glassmorphism-overlay {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+/* Main - Calc Tools */
+main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 5% 0;
+    justify-content: center;
+    transition: var(--trans);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    min-width: 420px;
+    width: 75%;
+    height: 100%;
+    padding: 32px;
+    border-radius: 32px;
+    border: var(--border);
+    justify-content: center;
+    overflow-y: scroll;
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container .main-box {
+    position: relative;
+    display: flex;
+    min-height: 500px;
+    height: 100%;
+    aspect-ratio: 3/5;
+    border-radius: 8px;
+}
+.container .forecast-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 480px;
+    height: 100%;
+    margin-left: 32px;
+}
+
+.main-box .main-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; 
+    background-image: url(../images/background/mor.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--light);
+}
+
+.main-card .main-date {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+.main-card .current-location {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    margin: 24px 0;
+    align-items: center;
+    align-self: center;
+}
+.main-card .current-location #current-district {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+    line-height: 2.5rem;
+}
+.main-card .current-location #current-province {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.6);
+}
+.main-card #main-temperature {
+    font-size: 4rem;
+    font-weight: 500;
+    text-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+    line-height: 4rem;
+    align-self: center;
+}
+.main-card .main-weather-icon {
+    height: min-content;
+    margin: 24px 0;
+    align-items: center;
+    align-self: center;
+}
+.main-card .main-weather-icon i {
+    display: none;
+    font-size: 6rem;
+    text-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+}
+.main-card .main-weather-icon i.show {
+    display: flex;
+}
+.main-card .main-weather-name {
+    font-size: 2rem;
+    line-height: 2rem;
+    text-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+    align-self: center;
+}
+.main-card .main-detail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: min-content;
+    margin: 32px 0;
+}
+    .main-detail .main-detail-title {
+        display: flex;
+        width: 100%;
+        height: min-content;
+        justify-content: space-between;
+    }
+    .main-detail .main-detail-value {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 3px;
+        border-radius: 999px;
+        border: var(--border);
+        background-color: rgba(0, 0, 0, 0.2);
+        height: min-content;
+        justify-content: space-between;
+    }
+    .main-detail .main-element-text {
+        width: calc(100%/3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    }
+
+.forecast-box .top-nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+    .top-nav hr {
+        display: flex;
+        width: 66%;
+        height: 1px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        margin-top: 56px;
+    }
+    .top-nav .title-web {
+        position: absolute;
+        left: 0;
+        font-family: var(--font-merriweather);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 40px;
+        color: var(--dark);
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
+    }
+    .top-nav .search-box {
+        position: absolute;
+        display: flex;
+        right: 0;
+        height: 100%;
+    }
+    .top-nav .search-box input {
+        position: absolute;
+        right: 0;
+        width: 360px;
+        height: 100%;
+        padding: 0 48px 0 20px;
+        border-radius: 999px;
+        border: none;
+
+        font-family: var(--font-lora);
+        font-size: 1rem;
+    }
+    .top-nav .search-box input:focus {
+        outline: 2px solid var(--primary);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .top-nav .search-box .nav-btn {
+        position: absolute;
+        display: flex;
+        right: 4px;
+        width: 32px;
+        height: 32px;
+        border-radius: 999px;
+        background: var(--primary);
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

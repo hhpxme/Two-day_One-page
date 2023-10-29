@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <main>
+        <div class="container glassmorphism-overlay">
+            <div class="main-box">
+                <div class="main-card" id="main-card">
+                    <span class="main-date">29 Oct, 2023</span>
+                    <div class="current-location" id="current-location">
+                        <span id="current-district">Tan Binh</span>
+                        <span id="current-province">Ho Chi Minh City</span>
+                    </div>
+                    <span id="main-temperature">30&deg;</span>
+                    <div class="main-weather-icon sun">
+                        <i class='bx bxs-sun sunny show' style="color: #fff27e;"></i>
+                        <i class='bx bx-cloud-rain raniny' style="color: #0e12287e;"></i>
+                        <i class='bx bx-cloud cloudy' style="color: #aaaaaa;"></i>
+                    </div>
+                    <span class="main-weather-name">Sunny</span>
+                    <div class="main-detail">
+                        <div class="main-detail-title">
+                            <span class="main-element-text">Feel-like</span>
+                            <span class="main-element-text">Wind</span>
+                            <span class="main-element-text">Clouds</span>
+                        </div>
+                        <div class="main-detail-value glassmorphism-overlay">
+                            <span class="main-element-text" id="main-feellike">32&deg;C</span>
+                            <span class="main-element-text" id="main-wind">5km/h</span>
+                            <span class="main-element-text" id="main-cloud">88%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-box">
+                <div class="top-nav">
+                    <span class="title-web">Weather Forecast</span>
+                    <div class="search-box">
+                        <input type="text" name="search-box" id="search-box" placeholder="Search your location...">
+                        <div class="nav-btn" id="btn-change-location">
+                            <i class='bx bxs-map' style="color: var(--light);"></i>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+                <div class="forecast-card">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
