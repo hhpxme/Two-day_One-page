@@ -20,7 +20,7 @@
                     <span id="main-temperature">30&deg;</span>
                     <div class="main-weather-icon sun">
                         <i class='bx bxs-sun sunny show' style="color: #fff27e;"></i>
-                        <i class='bx bx-cloud-rain raniny' style="color: #0e12287e;"></i>
+                        <i class='bx bx-cloud-rain rainy' style="color: #0e12287e;"></i>
                         <i class='bx bx-cloud cloudy' style="color: #aaaaaa;"></i>
                     </div>
                     <span class="main-weather-name">Sunny</span>
@@ -33,7 +33,7 @@
                         <div class="main-detail-value glassmorphism-overlay">
                             <span class="main-element-text" id="main-feellike">32&deg;C</span>
                             <span class="main-element-text" id="main-wind">5km/h</span>
-                            <span class="main-element-text" id="main-cloud">88%</span>
+                            <span class="main-element-text" id="main-cloud">50%</span>
                         </div>
                     </div>
                 </div>
@@ -49,8 +49,109 @@
                     </div>
                     <hr />
                 </div>
-                <div class="forecast-card">
+                <div class="forecast-card-slideshow">
+                    <i class='bx bx-chevron-right btn-arrow' id="next-card"></i>
+                    <i class='bx bx-chevron-left btn-arrow' id="prev-card"></i>
+                    <div class="forecast-card-container">
+                        <div class="forecast-card" id="card-1">
+                            <span class="card-date">30 Oct, 2023</span>
+                            <span class="card-weather-name">Sunny</span>
+                            <div class="card-weather-icon rainy">
+                                <i class='bx bxs-sun sunny'></i>
+                                <i class='bx bx-cloud-rain rainy show'></i>
+                                <i class='bx bx-cloud cloudy'></i>
+                            </div>
+                            <div class="card-temperature">
+                                <span id="card-min-temperature">28&deg;</span>
+                                <span>&MediumSpace;-&MediumSpace;</span>
+                                <span id="card-max-temperature">32&deg;</span>
+                            </div>
+                            <div class="card-detail-value">
+                                <div class="card-detail-text">
+                                    <i class='bx bx-wind'></i>
+                                    <span id="card-detail-wind">10km/h</span>
+                                </div>
+                                <div class="card-detail-text">
+                                    <i class='bx bx-cloud'></i>
+                                    <span id="card-detail-cloud">93%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-card" id="card-2">
+                            <span class="card-date">31 Oct, 2023</span>
+                            <span class="card-weather-name">Sunny</span>
+                            <div class="card-weather-icon rainy">
+                                <i class='bx bxs-sun sunny'></i>
+                                <i class='bx bx-cloud-rain rainy show'></i>
+                                <i class='bx bx-cloud cloudy'></i>
+                            </div>
+                            <div class="card-temperature">
+                                <span id="card-min-temperature">28&deg;</span>
+                                <span>&MediumSpace;-&MediumSpace;</span>
+                                <span id="card-max-temperature">32&deg;</span>
+                            </div>
+                            <div class="card-detail-value">
+                                <div class="card-detail-text">
+                                    <i class='bx bx-wind'></i>
+                                    <span id="card-detail-wind">10km/h</span>
+                                </div>
+                                <div class="card-detail-text">
+                                    <i class='bx bx-cloud'></i>
+                                    <span id="card-detail-cloud">93%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-card" id="card-3">
+                            <span class="card-date">01 Nov, 2023</span>
+                            <span class="card-weather-name">Sunny</span>
+                            <div class="card-weather-icon rainy">
+                                <i class='bx bxs-sun sunny'></i>
+                                <i class='bx bx-cloud-rain rainy show'></i>
+                                <i class='bx bx-cloud cloudy'></i>
+                            </div>
+                            <div class="card-temperature">
+                                <span id="card-min-temperature">28&deg;</span>
+                                <span>&MediumSpace;-&MediumSpace;</span>
+                                <span id="card-max-temperature">32&deg;</span>
+                            </div>
+                            <div class="card-detail-value">
+                                <div class="card-detail-text">
+                                    <i class='bx bx-wind'></i>
+                                    <span id="card-detail-wind">10km/h</span>
+                                </div>
+                                <div class="card-detail-text">
+                                    <i class='bx bx-cloud'></i>
+                                    <span id="card-detail-cloud">93%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-card card-hide" id="card-4">
+                            <span class="card-date">02 Nov, 2023</span>
+                            <span class="card-weather-name">Sunny</span>
+                            <div class="card-weather-icon rainy">
+                                <i class='bx bxs-sun sunny'></i>
+                                <i class='bx bx-cloud-rain rainy show'></i>
+                                <i class='bx bx-cloud cloudy'></i>
+                            </div>
+                            <div class="card-temperature">
+                                <span id="card-min-temperature">28&deg;</span>
+                                <span>&MediumSpace;-&MediumSpace;</span>
+                                <span id="card-max-temperature">32&deg;</span>
+                            </div>
+                            <div class="card-detail-value">
+                                <div class="card-detail-text">
+                                    <i class='bx bx-wind'></i>
+                                    <span id="card-detail-wind">10km/h</span>
+                                </div>
+                                <div class="card-detail-text">
+                                    <i class='bx bx-cloud'></i>
+                                    <span id="card-detail-cloud">96%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <span class="update-time-text">Update at 23:00 23 Nov 2023</span>
             </div>
         </div>
     </main>
