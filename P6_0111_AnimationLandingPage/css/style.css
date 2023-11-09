@@ -70,6 +70,24 @@ main {
     z-index: 0;
 }
 
+.geometry {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    min-height: 420px;
+    height: calc(66% - 96px);
+    aspect-ratio: 1/1;
+    background-color: var(--primary-dark-color);
+    border-radius: 999px;
+    align-self: center;
+    box-shadow: 0 0 32px var(--primary-light-color);
+    transition: none;
+}
+
 .main-picture {
     position: relative;
     display: flex;
@@ -84,27 +102,14 @@ main {
 .menu-container {
     position: relative;
     display: flex;
-    width: clamp(720px, 55%, 1600px);
-    height: clamp(520px, calc(100% - 48px - 48px), 960px);
+    width: clamp(460px, 55%, 1600px);
+    height: clamp(560px, calc(100% - 48px - 48px), 960px);
     justify-content: space-between;
     align-self: center;
     transition: var(--trans);
 }
 
-.menu-container .geometry {
-    position: relative;
-    display: flex;
-    min-height: 420px;
-    height: 66%;
-    aspect-ratio: 1/1;
-    background-color: var(--primary-dark-color);
-    border-radius: 999px;
-    align-self: center;
-    box-shadow: 0 0 32px var(--primary-light-color);
-    transition: none;
-}
-
-.menu-container .menu-left {
+.menu-container .menu-list {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -113,7 +118,7 @@ main {
     justify-content: space-around;
     align-items: center;
 }
-.menu-container .menu-right {
+.menu-container .menu-tools {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -122,16 +127,6 @@ main {
     justify-content: space-around;
     align-items: center;
     align-self: flex-end;
-}
-.menu-container .menu-sticky {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: -24px;
-    right: 24px;
-    width: calc(100% - 48px);
-    height: 160px;
-    border: var(--border);
 }
 
 .menu-button {
@@ -158,17 +153,17 @@ main {
     .menu-button .btn-icon:hover {
         background-color: var(--primary-light-color);
         box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
-        outline: 3px solid var(--primary-dark-color);
+        border: 1px solid var(--primary-dark-color);
     }
     .menu-button span {
         font-size: 1.2rem;
         font-weight: 600;
         line-height: 1.2rem;
     }
-    .menu-left .btn-icon:hover {
+    .menu-list .btn-icon:hover {
         color: var(--dark-color);
     }
-    .menu-right .btn-icon {
+    .menu-tools .btn-icon {
         font-size: 1.2rem;
         color: var(--dark-color);
         background-color: var(--primary-light-color);
@@ -190,7 +185,7 @@ main {
             height: 32px;
             border-radius: 999px;
             background-color: transparent;
-            background-image: url(../images/icons/moon.png);
+            background-image: url(../images/icons/sun.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -201,20 +196,166 @@ main {
             box-shadow: 4px 2px 8px rgba(255, 255, 255, 0.4);
         }
 
-
-
-@media screen and (max-width: 680px) {
-    .menu-container {
-        justify-content: center;
-    }
-    .menu-container .menu-left,
-    .menu-container .menu-right {
-        display: none;
-    }
+.menu-container.collapse {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    bottom: 24px;
+    width: calc(100% - 48px);
+    height: 132px;
+    border: 1px solid;
+    transition: var(--trans);
 }
 
+.menu-container.collapse .menu-list,
+.menu-container.collapse .menu-tools {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 56px;
+    justify-content: flex-end;
+}
+
+.menu-container.collapse .menu-button span {
+    display: none;
+}
+
+.menu-container.collapse .menu-button .btn-icon {
+    margin-bottom: 0px;
+    background-color: var(--primary-dark-color);
+    color: #f1f1f1;
+}
+
+/*
+.menu-sticky .menu-sticky-top,
+.menu-sticky .menu-sticky-bottom  {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menu-sticky .menu-bar {
+    position: relative;
+    display: flex;
+    width: min-content;
+    height: 64px;
+    align-items: center;
+}
+    .menu-bar .menu-sticky-button {
+        position: absolute;
+        display: flex;
+        right: 0;
+        width: 56px;
+        height: 56px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        border: 1px solid var(--primary-light-color);
+        background-color: var(--primary-dark-color);
+        font-size: 1.2rem;
+        color: #f1f1f1;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+    .menu-bar .menu-sticky-button.btn-expand {
+        display: flex;
+    }
+    .menu-bar .menu-sticky-button:hover {
+        background-color: var(--primary-light-color);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+        border: 1px solid var(--primary-dark-color);
+        color: var(--dark-color);
+    }
+        .menu-sticky-button.show {
+            display: flex;
+        }
+        .menu-sticky-button#theme-toggle:hover i.fa-solid,
+        body.dark .menu-sticky-button#theme-toggle i.fa-solid {
+            display: none;
+        }
+        .menu-sticky-button#theme-toggle:hover i.fa-regular,
+        body.dark .menu-sticky-button#theme-toggle i.fa-regular {
+            display: initial;
+        }
+        .menu-sticky-button#theme-toggle i.fa-solid,
+        body.dark .menu-sticky-button#theme-toggle:hover i.fa-solid {
+            display: flex;
+            color: #ffce3d;
+            text-shadow: 0 -4px 16px rgba(255,255,255,0.8);
+        }
+        .menu-sticky-button#theme-toggle i.fa-regular,
+        body.dark .menu-sticky-button#theme-toggle:hover i.fa-regular {
+            display: none;
+        }*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (max-width: 768px) {  
+    
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
 
         
 

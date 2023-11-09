@@ -15,8 +15,9 @@
         <span id="section-title">#Home-page</span>
     </header>
     <main class="homepage">
+        <div class="geometry"></div>
         <div class="menu-container">
-            <div class="menu-left">
+            <div class="menu-list">
                 <div class="menu-button" id="go-to-overview">
                     <div class="btn-icon">
                         <i class="fa-regular fa-user"></i>
@@ -42,11 +43,10 @@
                     <span>Contact</span>
                 </div>
             </div>
-            <div class="geometry"></div>
-            <div class="menu-right">
+            <div class="menu-tools">
                 <div class="menu-button" id="web-lang">
                     <div class="btn-icon">
-                        <span>en</span>
+                        <p>en</p>
                     </div>
                     <span>Language</span>
                 </div>
@@ -58,14 +58,49 @@
                     <span>Theme</span>
                 </div>
             </div>
+            <!--
             <div class="menu-sticky">
-                
-            </div>
+                <div class="menu-sticky-top">
+                    <div class="menu-bar" id="menu-tools" onclick="extendMenubar('menu-tools')">
+                        <div class="menu-sticky-button" id="lang-toggle">
+                            <span>en</span>
+                        </div>
+                        <div class="menu-sticky-button" id="theme-toggle">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
+                        <div class="menu-sticky-button btn-expand">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-sticky-bottom">
+                    <div class="menu-bar" id="menu-list" onclick="extendMenubar('menu-list')">
+                        <div class="menu-sticky-button">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="menu-sticky-button">
+                            <i class="fa-solid fa-lines-leaning"></i>
+                        </div>
+                        <div class="menu-sticky-button">
+                            <i class="fa-regular fa-folder-open"></i>
+                        </div>
+                        <div class="menu-sticky-button">
+                            <i class="fa-regular fa-address-card"></i>
+                        </div>
+                        <div class="menu-sticky-button btn-expand">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
         <div class="main-picture" style="display: none;">
             <img src="images/1.png" alt="">
         </div>
     </main>
+    <script src="./js/resize_window_script.js"></script>
+    <script src="./js/theme_script.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
